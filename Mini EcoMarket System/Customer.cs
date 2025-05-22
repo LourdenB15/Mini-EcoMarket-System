@@ -14,10 +14,10 @@ namespace Mini_EcoMarket_System
 
         public void PlaceOrder(Product product, int quantity)
         {
-                product.Stock -= quantity;
-                Order order = new Order(product.ProductName, quantity, product.Price * quantity);
-                OrderHistory.Add(order);
-                Console.WriteLine("Order placed successfully.");
+            product.Stock -= quantity;
+            Order order = new Order(product.ProductName, quantity, product.Price * quantity);
+            OrderHistory.Add(order);
+            Console.WriteLine("Order placed successfully.");
         }
 
         public override void DisplayInfo()
