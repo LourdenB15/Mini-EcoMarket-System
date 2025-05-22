@@ -9,7 +9,7 @@ namespace Mini_EcoMarket_System
     public class Customer : User
     {
         public List<Order> OrderHistory { get; private set; } = new List<Order>();
-        public Customer(string username, string email) : base(username, email) {}
+        public Customer(string username, string email) : base(username, email) { }
         
         public void PlaceOrder(Product product, int quantity)
         {
