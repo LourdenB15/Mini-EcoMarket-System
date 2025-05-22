@@ -7,15 +7,15 @@ namespace Mini_EcoMarket_System
     {
         public List<Order> OrderHistory { get; private set; } = new List<Order>();
         public Customer(string username, string email) : base(username, email) { }
-
+        
         public void PlaceOrder(Product product, int quantity)
         {
-                product.Stock -= quantity;
-                Order order = new Order(product.ProductName, quantity, product.Price * quantity);
-                OrderHistory.Add(order);
-                Console.WriteLine("Order placed successfully.");
+            product.Stock -= quantity;
+            Order order = new Order(product.ProductName, quantity, product.Price * quantity);
+            OrderHistory.Add(order);
+            Console.WriteLine("Order placed successfully.");
         }
-
+        
         public override void DisplayInfo()
         {
             Console.WriteLine($"Customer: {Username}, Email: {Email}, Orders Made: {OrderHistory.Count}");
